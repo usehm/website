@@ -1,0 +1,21 @@
+{
+  "name": "usehm.dev",
+  "private": true,
+  "type": "module",
+  "description": "Website and documentation for Hm, the AI harness and editor.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --watch",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "sync-docs": "node scripts/sync-docs.mjs"
+  },
+  "devDependencies": {
+    "marked": "^18.0.0",
+    "shiki": "^4.0.0",
+    "wrangler": "^4.161.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

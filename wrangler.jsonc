@@ -1,0 +1,27 @@
+{
+  // Cloudflare Worker that serves the static site in ./dist.
+  // `npm run deploy` builds the site and uploads it; `npm run preview` runs it locally.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "usehm-dev",
+  "compatibility_date": "2026-10-01",
+
+  // No Worker script: every request is answered from the static assets.
+  "assets": {
+    "directory": "./dist",
+    // /docs/install -> /docs/install/ -> dist/docs/install/index.html
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get dist/404.html with a 404 status.
+    "not_found_handling": "404-page"
+  },
+
+  // Attach the apex domain (the zone must be on this Cloudflare account).
+  // Remove this block to deploy to <name>.<account>.workers.dev only.
+  "routes": [
+    { "pattern": "usehm.dev", "custom_domain": true },
+    { "pattern": "www.usehm.dev", "custom_domain": true }
+  ],
+
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": { "enabled": true }
+}

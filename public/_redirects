@@ -1,0 +1,4 @@
+# Short links. Host redirects (www -> apex) need a Cloudflare redirect rule instead.
+/github https://github.com/mirzakhany/hm 302
+/install /docs/install/ 301
+/download /docs/install/ 301
