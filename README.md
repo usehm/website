@@ -1,6 +1,6 @@
 # usehm.dev
 
-The website and documentation for [Hm](https://github.com/mirzakhany/hm), served by a Cloudflare Worker with static assets.
+The website and documentation for [Hm](https://github.com/usehm/hm), served by a Cloudflare Worker with static assets.
 
 ```sh
 npm install

@@ -10,7 +10,7 @@ Prebuilt, signed releases for macOS, Linux and Windows are planned. Until then, 
 ## Build from source
 
 ```sh
-git clone https://github.com/mirzakhany/hm.git
+git clone https://github.com/usehm/hm.git
 cd hm
 make run            # run from source in the current folder
 ```

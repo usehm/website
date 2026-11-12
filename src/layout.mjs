@@ -3,7 +3,7 @@
 export const site = {
   name: 'Hm',
   url: 'https://usehm.dev',
-  repo: 'https://github.com/mirzakhany/hm',
+  repo: 'https://github.com/usehm/hm',
   tagline: 'The AI harness & editor for when you pause to think.',
   description:
     'Hm is a native desktop code editor with a bring-your-own-key AI coding agent built in. Written in Go, GPU-rendered, configured in YAML, for macOS, Linux and Windows.',
@@ -109,7 +109,7 @@ export function footer() {
     <div class="footer-grid">
       <div>
         <a class="brand" href="/"><img src="/img/appicon.png" alt="" width="30" height="30"><span>Hm<span class="dot">.</span></span></a>
-        <p>The AI harness &amp; editor for when you pause to think. Native, fast, and bring your own key.</p>
+        <p>The AI harness &amp; editor for when you pause to think. Native, open source (AGPL-3.0), and bring your own key.</p>
       </div>
       <div>
         <h4>Product</h4>
@@ -135,6 +135,7 @@ export function footer() {
           <li><a href="${site.repo}" rel="noopener">GitHub</a></li>
           <li><a href="${site.repo}/issues" rel="noopener">Issues</a></li>
           <li><a href="${site.repo}/releases" rel="noopener">Releases</a></li>
+          <li><a href="${site.repo}/blob/main/LICENSE" rel="noopener">License (AGPL-3.0)</a></li>
           <li><a href="https://github.com/mirzakhany/yoga" rel="noopener">Yoga UI toolkit</a></li>
         </ul>
       </div>

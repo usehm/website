@@ -4,9 +4,9 @@ description: Drive an hm agent session from another program over JSON lines.
 section: Automation
 order: 2
 ---
-<!-- Synced from github.com/mirzakhany/hm/docs/rpc.md by scripts/sync-docs.mjs; edit it there. -->
+<!-- Synced from github.com/usehm/hm/docs/rpc.md by scripts/sync-docs.mjs; edit it there. -->
 
-`hm agent --rpc` runs hm's agent for another program: an editor plugin, a bot, a test harness. The program writes JSON commands to hm's standard input, one per line, and reads JSON lines from its standard output: the [events](/docs/events/) of `--output json`, and a `response` to each command. Warnings for people go to standard error. [examples/rpc_client.py](https://github.com/mirzakhany/hm/blob/main/examples/rpc_client.py) is a complete client in about a hundred lines of Python.
+`hm agent --rpc` runs hm's agent for another program: an editor plugin, a bot, a test harness. The program writes JSON commands to hm's standard input, one per line, and reads JSON lines from its standard output: the [events](/docs/events/) of `--output json`, and a `response` to each command. Warnings for people go to standard error. [examples/rpc_client.py](https://github.com/usehm/hm/blob/main/examples/rpc_client.py) is a complete client in about a hundred lines of Python.
 
 ```sh
 hm agent --rpc [--cwd DIR] [--mode NAME] [--provider NAME] [--model ID]

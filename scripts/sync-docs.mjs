@@ -24,7 +24,7 @@ const files = [
 const links = [
   [/\]\(events\.md\)/g, '](/docs/events/)'],
   [/\]\(rpc\.md\)/g, '](/docs/rpc/)'],
-  [/\]\(\.\.\/examples\/([^)]+)\)/g, '](https://github.com/mirzakhany/hm/blob/main/examples/$1)'],
+  [/\]\(\.\.\/examples\/([^)]+)\)/g, '](https://github.com/usehm/hm/blob/main/examples/$1)'],
 ];
 
 for (const f of files) {
@@ -32,7 +32,7 @@ for (const f of files) {
   md = md.replace(/^# .*\n+/, ''); // the page title comes from the front matter
   for (const [re, to] of links) md = md.replace(re, to);
   const front = Object.entries(f.front).map(([k, v]) => `${k}: ${v}`).join('\n');
-  const note = `<!-- Synced from github.com/mirzakhany/hm/${f.src} by scripts/sync-docs.mjs; edit it there. -->`;
+  const note = `<!-- Synced from github.com/usehm/hm/${f.src} by scripts/sync-docs.mjs; edit it there. -->`;
   await writeFile(path.join(root, 'content/docs', f.dst), `---\n${front}\n---\n${note}\n\n${md}`);
   console.log(`synced ${f.src} -> content/docs/${f.dst}`);
 }

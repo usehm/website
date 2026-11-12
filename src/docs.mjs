@@ -21,7 +21,7 @@ export function docPage({ doc, nav, prev, next, layout }) {
   const synced = /^(rpc|events)\.md$/.test(doc.file);
   const editUrl = synced
     ? `${site.repo}/blob/main/docs/${doc.file}`
-    : `https://github.com/mirzakhany/usehm.dev/edit/main/content/docs/${doc.file}`;
+    : `https://github.com/usehm/website/edit/main/content/docs/${doc.file}`;
 
   return `${layout.head({ title: doc.title, description: doc.description, path: doc.url, type: 'article' })}
 <body class="docs-body">

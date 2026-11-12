@@ -1,14 +1,14 @@
 ---
 title: Go package
-description: Embed hm's agent in your own Go program with github.com/mirzakhany/hm/pkg/hm/agent.
+description: Embed hm's agent in your own Go program with github.com/usehm/hm/pkg/hm/agent.
 section: Automation
 order: 4
 ---
 
-The Go package `github.com/mirzakhany/hm/pkg/hm/agent` runs the same agent without the window, with the same config, `guard.yaml`, skills, MCP servers, instruction files and saved sessions.
+The Go package `github.com/usehm/hm/pkg/hm/agent` runs the same agent without the window, with the same config, `guard.yaml`, skills, MCP servers, instruction files and saved sessions.
 
 ```sh
-go get github.com/mirzakhany/hm/pkg/hm/agent
+go get github.com/usehm/hm/pkg/hm/agent
 ```
 
 ```go

@@ -140,7 +140,7 @@ ${nav()}
         <span>${icon('check')}macOS, Linux &amp; Windows</span>
         <span>${icon('check')}No browser engine</span>
         <span>${icon('check')}Bring your own key</span>
-        <span>${icon('check')}Plain YAML config</span>
+        <span>${icon('check')}Open source, AGPL-3.0</span>
       </div>
     </div>
     <div class="hero-shot">

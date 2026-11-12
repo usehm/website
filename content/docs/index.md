@@ -29,3 +29,7 @@ Fast where it can be, and quiet when you need to think.
 - [The agent](/docs/agent/): chat, sessions, modes and what the agent can do.
 - [Providers and models](/docs/providers/): connect Anthropic, Gemini, OpenAI, Azure or a local model.
 - [Headless CLI](/docs/headless/): run the agent in scripts and CI with `hm agent -p`.
+
+## License
+
+Hm is open source under the [GNU Affero General Public License v3.0](https://github.com/usehm/hm/blob/main/LICENSE). Contributions are welcome under a [Contributor License Agreement](https://github.com/usehm/hm/blob/main/CLA.md); the name and logo are covered by the [trademark policy](https://github.com/usehm/hm/blob/main/TRADEMARKS.md).

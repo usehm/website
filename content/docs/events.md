@@ -4,7 +4,7 @@ description: The event stream written by hm agent --output json and --rpc.
 section: Automation
 order: 3
 ---
-<!-- Synced from github.com/mirzakhany/hm/docs/events.md by scripts/sync-docs.mjs; edit it there. -->
+<!-- Synced from github.com/usehm/hm/docs/events.md by scripts/sync-docs.mjs; edit it there. -->
 
 `hm agent -p --output json "prompt"` writes what the agent does to standard output, one JSON object per line. Nothing else goes there: warnings and errors for people go to standard error. `hm agent --rpc` writes the same events, with a `response` to each command; see [rpc.md](/docs/rpc/).
 

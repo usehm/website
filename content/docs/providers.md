@@ -60,4 +60,4 @@ Every field but `id` is optional; one you leave out comes from hm's own table or
 
 ## Subscriptions
 
-Hm uses API keys and cloud credentials, not consumer subscriptions: most providers' terms don't allow a third-party tool to use a subscription. The [notes in the repository](https://github.com/mirzakhany/hm/blob/main/docs/subscription-sign-in.md) list what each provider allows.
+Hm uses API keys and cloud credentials, not consumer subscriptions: most providers' terms don't allow a third-party tool to use a subscription. The [notes in the repository](https://github.com/usehm/hm/blob/main/docs/subscription-sign-in.md) list what each provider allows.
