@@ -30,12 +30,16 @@ Screenshots live in `public/img/` and are real captures of the app at 2x. To sho
 
 ## Deploying
 
-The first time:
+Pushes deploy through Cloudflare's Git integration (Workers Builds), with no API token in GitHub. In the Cloudflare dashboard: Workers & Pages → Create → Import a repository → `usehm/website`, with:
 
-1. `npx wrangler login`
-2. Make sure the `usehm.dev` zone is on the same Cloudflare account (the `routes` in `wrangler.jsonc` attach the domains). Remove `routes` to deploy to `*.workers.dev` only.
-3. `npm run deploy`
+| Setting | Value |
+|---|---|
+| Project name | `usehm-dev` (must match `name` in `wrangler.jsonc`) |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler versions upload` (a preview URL per branch) |
+| Root directory | `/` |
 
-From CI, `.github/workflows/deploy.yml` deploys on every push to `main`. It needs the `CLOUDFLARE_API_TOKEN` (with the "Edit Cloudflare Workers" template) and `CLOUDFLARE_ACCOUNT_ID` repository secrets.
+The `usehm.dev` zone must be on the same Cloudflare account: the `routes` in `wrangler.jsonc` attach the domains. Remove `routes` to deploy to `*.workers.dev` only. To deploy by hand from your machine instead, run `npx wrangler login` once, then `npm run deploy`.
 
 To redirect `www.usehm.dev` to the apex, add a redirect rule in the Cloudflare dashboard (Rules → Redirect Rules); `_redirects` only handles paths.
