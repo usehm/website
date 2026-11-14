@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "description": "Website and documentation for Hm, the AI harness and editor.",
+  "license": "MIT",
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/build.mjs --watch",

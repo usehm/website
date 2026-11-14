@@ -43,3 +43,7 @@ Pushes deploy through Cloudflare's Git integration (Workers Builds), with no API
 The `usehm.dev` zone must be on the same Cloudflare account: the `routes` in `wrangler.jsonc` attach the domains. Remove `routes` to deploy to `*.workers.dev` only. To deploy by hand from your machine instead, run `npx wrangler login` once, then `npm run deploy`.
 
 To redirect `www.usehm.dev` to the apex, add a redirect rule in the Cloudflare dashboard (Rules → Redirect Rules); `_redirects` only handles paths.
+
+## License
+
+The website's code and text are [MIT](LICENSE). The name "Hm" and the Hm logo are trademarks and aren't covered by the license; see [TRADEMARKS.md](https://github.com/usehm/hm/blob/main/TRADEMARKS.md).
