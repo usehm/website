@@ -6,7 +6,6 @@ order: 4
 ---
 
 macOS keys; on Windows and Linux `cmd` is `ctrl`, except where a column says otherwise. Every key can be changed in **Settings → Keyboard Shortcuts** or in YAML; see [Configuration](/docs/configuration/#keyboard-shortcuts).
-
 ## Find and replace
 
 | Action | macOS | Windows/Linux |
@@ -56,17 +55,17 @@ macOS keys; on Windows and Linux `cmd` is `ctrl`, except where a column says oth
 
 ## App
 
-| Action | macOS |
-|---|---|
-| Command palette | `cmd+shift+p` |
-| Go to file | `cmd+p` |
-| Go to symbol in file | `cmd+shift+o` |
-| Toggle sidebar | `cmd+b` |
-| Toggle agent | `cmd+l` |
-| Ask the agent about the selection | `cmd+alt+l` |
-| While the agent works: steer / send after the turn | `enter` / `alt+enter` |
-| Agent: pick a model / next favourite model | `ctrl+l` / `ctrl+p` |
-| Terminal | `` ctrl+` `` |
-| Settings | `cmd+,` |
-| Zoom in / out / reset | `cmd+=` / `cmd+-` / `cmd+0` |
+| Action | macOS | Windows/Linux |
+|---|---|---|
+| Command palette | `cmd+shift+p` | `ctrl+shift+p` |
+| Go to file | `cmd+p` | `ctrl+p` |
+| Go to symbol in file | `cmd+shift+o` | `ctrl+shift+o` |
+| Toggle sidebar | `cmd+b` | `ctrl+b` |
+| Toggle agent | `cmd+l` | `ctrl+l` |
+| Ask the agent about the selection | `cmd+alt+l` | `ctrl+alt+l` |
+| While the agent works: steer / send after the turn | `enter` / `alt+enter` | `enter` / `alt+enter` |
+| Agent: pick a model / next favourite model | `ctrl+l` / `ctrl+p` | `alt+m` / `alt+n` |
+| Terminal | `` ctrl+` `` | `` ctrl+` `` |
+| Settings | `cmd+,` | `ctrl+,` |
+| Zoom in / out / reset | `cmd+=` / `cmd+-` / `cmd+0` | `ctrl+=` / `ctrl+-` / `ctrl+0` |
 

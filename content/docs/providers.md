@@ -33,9 +33,9 @@ For Vertex AI, sign in once with `gcloud auth application-default login`. For Az
 
 ## Switching models
 
-- `ctrl+l`, or the composer's model menu → **All models…**, searches every provider's models.
+- `ctrl+l` (`alt+m` on Windows and Linux), or the composer's model menu → **All models…**, searches every provider's models.
 - `/model <name>` picks one by `provider/model`, model id or part of one.
-- `ctrl+p` steps through `agent.favorite_models`.
+- `ctrl+p` (`alt+n` on Windows and Linux) steps through `agent.favorite_models`.
 
 The history goes along when you switch; thinking written by another provider is left out. A reopened session goes on with the model and thinking it last ran.
 
