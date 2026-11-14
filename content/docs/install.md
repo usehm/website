@@ -1,51 +1,58 @@
 ---
 title: Installation
-description: Build Hm from source on macOS, Linux or Windows and install the hm command.
+description: Install Hm with Homebrew or a download for macOS, Linux and Windows, or build it from source.
 section: Getting started
 order: 2
 ---
 
-Prebuilt, signed releases for macOS, Linux and Windows are planned. Until then, Hm is built from source. You need [Go](https://go.dev/dl/) (see `go.mod` for the version) and git.
+## macOS
+
+With [Homebrew](https://brew.sh):
+
+```sh
+brew install --cask usehm/tap/hm
+```
+
+This installs `Hm.app` and the `hm` command. Or download the DMG for your Mac from the [latest release](https://github.com/usehm/hm/releases/latest): `arm64` for Apple silicon, `amd64` for Intel. Both are signed and notarized.
+
+## Linux
+
+Download `hm-linux-<version>-amd64.tar.xz` or `-arm64.tar.xz` from the [latest release](https://github.com/usehm/hm/releases/latest) and unpack it. Pasting images into the agent's message box needs `wl-paste` (Wayland) or `xclip` (X11).
+
+## Windows
+
+Download `hm-windows-<version>-amd64.zip` from the [latest release](https://github.com/usehm/hm/releases/latest) and unzip it. It runs on Windows on ARM too, emulated. The build isn't code-signed yet, so SmartScreen may warn on first run: choose **More info → Run anyway**.
+
+## Updates
+
+Hm checks for updates and installs them from inside the app, checking each download's signature first. Homebrew installs update with `brew upgrade --cask hm`. To get prereleases too, set:
+
+```yaml
+updates:
+  channel: prerelease   # stable | prerelease | off
+```
 
 ## Build from source
+
+You need [Go](https://go.dev/dl/) (see `go.mod` for the version) and git.
 
 ```sh
 git clone https://github.com/usehm/hm.git
 cd hm
 make run            # run from source in the current folder
-```
-
-`make run` starts Hm on the folder you are in. The other targets:
-
-```sh
 make test           # run the tests
-make install_deps   # install the yoga CLI used for packaging
-make app            # build Hm.app and a DMG into dist/darwin
-make install        # build Hm.app, copy it to /Applications and install `hm`
 ```
 
-## macOS
+To package it, install the yoga CLI first:
 
 ```sh
 make install_deps
-make install
-```
-
-This builds an unsigned (ad-hoc signed) `Hm.app` for your Mac's architecture, copies it to `/Applications` and installs the `hm` shell command. A local build reports its version as `dev`, so it never offers to update itself.
-
-Inside the app, **Install 'hm' Command in PATH** from the command palette does the last step on its own.
-
-## Linux and Windows
-
-The packaging targets build an archive for each platform with the yoga CLI:
-
-```sh
-make install_deps
+make install         # macOS: build Hm.app, copy it to /Applications and install `hm`
 make build_linux     # tar.xz in dist/linux
 make build_windows   # amd64 build in dist/windows
 ```
 
-On Linux, pasting images into the agent's message box needs `wl-paste` (Wayland) or `xclip` (X11).
+A local build reports its version as `dev`, so it never offers to update itself.
 
 ## Open a folder
 

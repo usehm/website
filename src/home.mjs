@@ -386,10 +386,11 @@ ${nav()}
     <div class="cta reveal">
       <img src="/img/appicon.png" alt="" width="88" height="88" loading="lazy">
       <h2>Take a moment. <span class="serif">Hm.</span></h2>
-      <p>Build it from source today. Signed releases for macOS, Linux and Windows are on the way.</p>
-      <div class="install-cmd"><span class="p">$</span><code>git clone ${site.repo}.git &amp;&amp; cd hm &amp;&amp; make install</code><button class="copy-btn" type="button" aria-label="Copy command" data-copy="git clone ${site.repo}.git && cd hm && make install"></button></div>
+      <p>Signed and notarized for macOS, with builds for Linux and Windows. Free and open source.</p>
+      <div class="install-cmd"><span class="p">$</span><code>brew install --cask usehm/tap/hm</code><button class="copy-btn" type="button" aria-label="Copy command" data-copy="brew install --cask usehm/tap/hm"></button></div>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="/docs/install/">${icon('book')}Installation guide</a>
+        <a class="btn btn-primary" href="${site.repo}/releases/latest" rel="noopener">${icon('download')}Download</a>
+        <a class="btn btn-ghost" href="/docs/install/">${icon('book')}Installation guide</a>
         <a class="btn btn-ghost" href="${site.repo}" rel="noopener">${icon('github')}Star on GitHub</a>
       </div>
     </div>
